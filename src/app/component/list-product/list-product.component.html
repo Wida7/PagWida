@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+        <button type="button" routerLink="/add-product/" class="btn btn-primary">Agregar productos</button>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acción</th>    
+                </tr>
+            </thead>
+            <tbody>
+
+                <!–– 'Crear ciclo ngFor para iterar producto en Productos y iControl para controlar la información' ––>
+                
+                <tr *ngFor="let producto of Productos;let iControl=index">
+                    <td>{{producto.id}}</td>
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.precio}}</td>
+                    <td>
+                        <a class="btn btn-info" routerLink="/edit-product/{{producto.id}}">Editar</a> 
+                        | 
+                        <a name="" id="" class="btn btn-danger" (click)="deleteData(producto.id,iControl)" role="button">Borrar</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>        
+    </div>
+</div>

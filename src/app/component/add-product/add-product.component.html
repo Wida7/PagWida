@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        Agregar producto
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formOfProducts" (ngSubmit)="sendData()" ngNativeValidate>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre:</label>
+              <input type="text" required
+                class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Nombre del producto">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Precio:</label>
+                <input type="number" required
+                  class="form-control" name="" formControlName="precio" id="" aria-describedby="helpId" placeholder="Precio del producto">
+            </div>            
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" routerLink="/list-product/" class="btn btn-danger">Cancelar</button>
+            </div> 
+
+        </form>
+
+    </div>
+</div>

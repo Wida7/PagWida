@@ -1,0 +1,25 @@
+
+<div class="card-body">
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>   
+            </tr>
+        </thead>
+        <tbody>
+      
+            <tr *ngFor="let i in cantidad">
+                <td *ngFor="let num of numbers">{{num}}</td>
+            </tr>
+
+        </tbody>
+    </table>        
+</div>
+
+<!-- <div *ngFor="let num of numbers">
+    {{num}}
+</div> -->
